@@ -1,0 +1,70 @@
+package condicionaiss;
+
+import java.util.Scanner;
+
+public class Condicionaiss {
+
+    
+    public static void main(String[] args) {
+        /* Desafio 1: Saber se a pessoa é ou não maior de idade */
+   
+        Scanner scann = new Scanner(System.in);
+     System.out.println("Digite a sua idade: ");
+     int idade = scann.nextInt();
+     
+     if (idade > 18){
+         System.out.println("Maior de Idade");
+     } else {
+         System.out.println("Menor de Idade");
+     }
+      /*DESAFIO 2: LER 3 NOTAS, DIZER A MÉDIA E VERIFICAR SE A MESMA É >=6 
+       PARA TER A APROVAÇÃO: */
+     
+     System.out.println("Digite a primeira nota: ");
+     double n1 = scann.nextDouble();
+     System.out.println("Digite a segunda nota: ");
+     double n2 = scann.nextDouble();
+     System.out.println("Digite a terceira nota: ");
+     double n3 = scann.nextDouble();
+     
+     double media = (n1 + n2 + n3)/3;
+     System.out.println("Sua media foi" + media);
+     
+    if ( media >= 6){
+        System.out.println("Aprovado! ");
+    } else{
+        System.out.println("Reprovado!");
+    }
+    
+    
+   /*Desafio 3: dizer se o triangulo é isóceles, escaleno ou equilátero
+    e(&&) / ou (||)*/
+           
+    System.out.println("Digite o primeiro lado do triangulo: ");
+    int l1 = scann.nextInt();
+    System.out.println("Digite o segundo lado do triangulo: ");
+    int l2 = scann.nextInt();
+    System.out.println("Digite o terceiro lado do triangulo: ");
+    int l3 = scann.nextInt();
+    
+    
+    
+    
+    /*Desafio 4: Faça uma calculo onde o cara recebe um aumento de 15%
+            e depois desconte 8%. Imprima o salário inicial, o salário com aumento e
+            o salário final.*/
+    
+    
+    System.out.println("Digite o seu salario: ");
+    double sal = scann.nextDouble();
+    
+    System.out.println("Salario atual: R$ " + sal);
+    double aumento = ((sal * 15)/100) + sal;
+    System.out.println("Salario com aumento de 15% e de: R$"+ aumento);
+    
+    double desconto = aumento - ((aumento * 8)/100);
+    System.out.println("Salario com desconto de 8% fica: R$ " + desconto);
+    
+    }
+    
+}
